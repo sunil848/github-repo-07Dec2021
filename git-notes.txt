@@ -1,0 +1,19 @@
+Version Control With GIT
+
+Plan -> Code -> Build -> Test -> Release -> Deploy -> Operate -> Monitor and the cycle repeates 
+
+
+# Can be done offline
+
+git init					- 	initialize empty git repository
+
+Newfile (Working area) 		-	Untracked file
+Add file to git repo		-	Add to git staging area
+Commited to local git repo	- 	work tree is clean - no pending actions
+------------------------------------------------------------------------ 
+# Must be done online
+Push local repo to remote repo
+
+
+
+
