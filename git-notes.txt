@@ -153,3 +153,304 @@ D:\VISHU\RHEL_DevOps_AWS\git>git config user.email
 sunilvishwanathp@gmail.com
 
 
+D:\VISHU\RHEL_DevOps_AWS\git>git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   git-notes.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        git-firstfile.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+D:\VISHU\RHEL_DevOps_AWS\git>git add .
+
+D:\VISHU\RHEL_DevOps_AWS\git>git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   git-firstfile.txt
+        modified:   git-notes.txt
+
+
+D:\VISHU\RHEL_DevOps_AWS\git>git commit -m "Changes made on git-notes & added new file to repo"
+[master 2731c09] Changes made on git-notes & added new file to repo
+ 2 files changed, 137 insertions(+)
+ create mode 100644 git-firstfile.txt
+
+D:\VISHU\RHEL_DevOps_AWS\git>git status
+On branch master
+nothing to commit, working tree clean
+
+D:\VISHU\RHEL_DevOps_AWS\git>git log
+commit 2731c09dd20791f6007c2c1ec216a325707e989b (HEAD -> master)
+Author: Sunil <sunilvishwanathp@gmail.com>
+Date:   Tue Dec 7 14:16:26 2021 +0530
+
+    Changes made on git-notes & added new file to repo
+
+commit c223db5079fd452eb4def4c77dc72e9d025a0977
+Author: Sunil <sunilvishwanathp@gmail.com>
+Date:   Tue Dec 7 13:55:59 2021 +0530
+
+    First check-in
+
+
+D:\VISHU\RHEL_DevOps_AWS\git>dir
+ Volume in drive D is SAM
+ Volume Serial Number is 4A20-A0DD
+
+ Directory of D:\VISHU\RHEL_DevOps_AWS\git
+
+12/07/2021  02:15 PM    <DIR>          .
+12/07/2021  02:15 PM    <DIR>          ..
+12/07/2021  02:15 PM                24 git-firstfile.txt
+12/07/2021  02:17 PM             5,724 git-notes.txt
+               2 File(s)          5,748 bytes
+               2 Dir(s)  498,028,916,736 bytes free
+			   
+			   
+Github			   
+-----------------
+Note: When you create a repository in github you will see below details
+
+Quick setup — if you’ve done this kind of thing before
+or	
+git@github.com:sunil848/github-repo-07Dec2021.git
+Get started by creating a new file or uploading an existing file. We recommend every repository include a README, LICENSE, and .gitignore.
+
+…or create a new repository on the command line
+echo "# github-repo-07Dec2021" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:sunil848/github-repo-07Dec2021.git
+git push -u origin main
+
+Note: We are proceeding with below procedure, as we already created repo in local
+
+…or push an existing repository from the command line
+git remote add origin git@github.com:sunil848/github-repo-07Dec2021.git
+git branch -M main
+git push -u origin main
+
+…or import code from another repository
+You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
+
+On your system git cmd
+-----------------------
+
+D:\VISHU\RHEL_DevOps_AWS\git>git remote add origin git@github.com:sunil848/github-repo-07Dec2021.git
+
+D:\VISHU\RHEL_DevOps_AWS\git>git remote -v
+origin  git@github.com:sunil848/github-repo-07Dec2021.git (fetch)
+origin  git@github.com:sunil848/github-repo-07Dec2021.git (push)
+
+D:\VISHU\RHEL_DevOps_AWS\git>git branch
+* master
+
+D:\VISHU\RHEL_DevOps_AWS\git>git push -u origin master
+The authenticity of host 'github.com (13.234.210.38)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+D:\VISHU\RHEL_DevOps_AWS\git>git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'github.com:sunil848/github-repo-07Dec2021.git'
+
+D:\VISHU\RHEL_DevOps_AWS\git>git push -u origin master
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+D:\VISHU\RHEL_DevOps_AWS\git>ssh -vT git@github.com
+OpenSSH_for_Windows_8.1p1, LibreSSL 3.0.2
+debug1: Connecting to github.com [13.234.210.38] port 22.
+debug1: Connection established.
+debug1: identity file C:\\Users\\sunil/.ssh/id_rsa type -1
+debug1: identity file C:\\Users\\sunil/.ssh/id_rsa-cert type -1
+debug1: identity file C:\\Users\\sunil/.ssh/id_dsa type -1
+debug1: identity file C:\\Users\\sunil/.ssh/id_dsa-cert type -1
+debug1: identity file C:\\Users\\sunil/.ssh/id_ecdsa type -1
+debug1: identity file C:\\Users\\sunil/.ssh/id_ecdsa-cert type -1
+debug1: identity file C:\\Users\\sunil/.ssh/id_ed25519 type -1
+debug1: identity file C:\\Users\\sunil/.ssh/id_ed25519-cert type -1
+debug1: identity file C:\\Users\\sunil/.ssh/id_xmss type -1
+debug1: identity file C:\\Users\\sunil/.ssh/id_xmss-cert type -1
+debug1: Local version string SSH-2.0-OpenSSH_for_Windows_8.1
+debug1: Remote protocol version 2.0, remote software version babeld-8eb00d7e
+debug1: no match: babeld-8eb00d7e
+debug1: Authenticating to github.com:22 as 'git'
+debug1: SSH2_MSG_KEXINIT sent
+debug1: SSH2_MSG_KEXINIT received
+debug1: kex: algorithm: curve25519-sha256
+debug1: kex: host key algorithm: ssh-ed25519
+debug1: kex: server->client cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: kex: client->server cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: expecting SSH2_MSG_KEX_ECDH_REPLY
+debug1: Server host key: ssh-ed25519 SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU
+debug1: Host 'github.com' is known and matches the ED25519 host key.
+debug1: Found key in C:\\Users\\sunil/.ssh/known_hosts:1
+Warning: Permanently added the ED25519 host key for IP address '13.234.210.38' to the list of known hosts.
+debug1: rekey out after 134217728 blocks
+debug1: SSH2_MSG_NEWKEYS sent
+debug1: expecting SSH2_MSG_NEWKEYS
+debug1: SSH2_MSG_NEWKEYS received
+debug1: rekey in after 134217728 blocks
+debug1: pubkey_prepare: ssh_get_authentication_socket: No such file or directory
+debug1: Will attempt key: C:\\Users\\sunil/.ssh/id_rsa
+debug1: Will attempt key: C:\\Users\\sunil/.ssh/id_dsa
+debug1: Will attempt key: C:\\Users\\sunil/.ssh/id_ecdsa
+debug1: Will attempt key: C:\\Users\\sunil/.ssh/id_ed25519
+debug1: Will attempt key: C:\\Users\\sunil/.ssh/id_xmss
+debug1: SSH2_MSG_EXT_INFO received
+debug1: kex_input_ext_info: server-sig-algs=<ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,sk-ssh-ed25519-cert-v01@openssh.com,sk-ecdsa-sha2-nistp256-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ssh-rsa-cert-v01@openssh.com,ssh-dss-cert-v01@openssh.com,sk-ssh-ed25519@openssh.com,sk-ecdsa-sha2-nistp256@openssh.com,ssh-ed25519,ecdsa-sha2-nistp521,ecdsa-sha2-nistp384,ecdsa-sha2-nistp256,rsa-sha2-512,rsa-sha2-256,ssh-rsa,ssh-dss>
+debug1: SSH2_MSG_SERVICE_ACCEPT received
+debug1: Authentications that can continue: publickey
+debug1: Next authentication method: publickey
+debug1: Trying private key: C:\\Users\\sunil/.ssh/id_rsa
+debug1: Trying private key: C:\\Users\\sunil/.ssh/id_dsa
+debug1: Trying private key: C:\\Users\\sunil/.ssh/id_ecdsa
+debug1: Trying private key: C:\\Users\\sunil/.ssh/id_ed25519
+debug1: Trying private key: C:\\Users\\sunil/.ssh/id_xmss
+debug1: No more authentication methods to try.
+git@github.com: Permission denied (publickey).
+
+D:\VISHU\RHEL_DevOps_AWS\git>ssh -T sunil848@github.com
+Warning: Permanently added the ED25519 host key for IP address '13.234.176.102' to the list of known hosts.
+sunil848@github.com: Permission denied (publickey).
+
+D:\VISHU\RHEL_DevOps_AWS\git>ssh -T Sunil@github.com
+Sunil@github.com: Permission denied (publickey).
+
+D:\VISHU\RHEL_DevOps_AWS\git>ssh -T sunil848@github.com
+sunil848@github.com: Permission denied (publickey).
+
+D:\VISHU\RHEL_DevOps_AWS\git>ssh-agent -s
+unable to start ssh-agent service, error :1058
+
+D:\VISHU\RHEL_DevOps_AWS\git>
+
+-----------------------
+Error fix
+
+"Help, I keep getting a 'Permission Denied (publickey)' error when I push!"
+This means, on your local machine, you haven't made any SSH keys. Not to worry. Here's how to fix:
+
+Open git bash (Use the Windows search. To find it, type "git bash") or the Mac Terminal. Pro Tip: You can use any *nix based command prompt (but not the default Windows Command Prompt!)
+
+Type cd ~/.ssh. This will take you to the root directory for Git (Likely C:\Users\[YOUR-USER-NAME]\.ssh\ on Windows)
+
+Within the .ssh folder, there should be these two files: id_rsa and id_rsa.pub. These are the files that tell your computer how to communicate with GitHub, BitBucket, or any other Git based service. Type ls to see a directory listing. If those two files don't show up, proceed to the next step. NOTE: Your SSH keys must be named id_rsa and id_rsa.pub in order for Git, GitHub, and BitBucket to recognize them by default.
+
+To create the SSH keys, type ssh-keygen -t rsa -C "your_email@example.com". This will create both id_rsa and id_rsa.pub files.
+
+Now, go and open id_rsa.pub in your favorite text editor (you can do this via Windows Explorer or the OSX Finder if you like, typing open . will open the folder).
+
+Copy the contents--exactly as it appears, with no extra spaces or lines--of id_rsa.pub and paste it into GitHub and/or BitBucket under the Account Settings > SSH Keys. NOTE: I like to give the SSH key a descriptive name, usually with the name of the workstation I'm on along with the date.
+
+Now that you've added your public key to Github and/or BitBucket, try to git push again and see if it works. It should!
+
+
+In git bash
+--------------------
+
+
+AV-9383@VA-8393 MINGW64 /d/VISHU/RHEL_DevOps_AWS/git/.git (GIT_DIR!)
+$ cd ~/.ssh
+
+AV-9383@VA-8393 MINGW64 ~/.ssh
+$ pwd
+/c/Users/sunil/.ssh
+
+AV-9383@VA-8393 MINGW64 ~/.ssh
+$ ls =lart
+ls: cannot access '=lart': No such file or directory
+
+AV-9383@VA-8393 MINGW64 ~/.ssh
+$ ls -lart
+total 13
+drwxr-xr-x 1 AV-9383 197609   0 Dec  7 14:34 ../
+drwxr-xr-x 1 AV-9383 197609   0 Dec  7 14:34 ./
+-rw-r--r-- 1 AV-9383 197609 285 Dec  7 14:40 known_hosts
+
+AV-9383@VA-8393 MINGW64 ~/.ssh
+$ ls -la
+total 13
+drwxr-xr-x 1 AV-9383 197609   0 Dec  7 14:34 ./
+drwxr-xr-x 1 AV-9383 197609   0 Dec  7 14:34 ../
+-rw-r--r-- 1 AV-9383 197609 285 Dec  7 14:40 known_hosts
+
+AV-9383@VA-8393 MINGW64 ~/.ssh
+$ pwd
+/c/Users/sunil/.ssh
+
+AV-9383@VA-8393 MINGW64 ~/.ssh
+$ ssh-keygen -t rsa -C "sunilvishwanathp@gmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/sunil/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/sunil/.ssh/id_rsa
+Your public key has been saved in /c/Users/sunil/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:X2qguqXEpmnT4FUdwodgkJ6lIoZFvc6mWYeZX2HDcxs sunilvishwanathp@gmail.com
+The key's randomart image is:
++---[RSA 3072]----+
+| .o+oo .         |
+|  o.o + o        |
+|.o + . = .       |
+|+.+ . . B E      |
+|o. o = .S= o.    |
+|  ..X ...o.o     |
+| . O+oo.  +      |
+|  *=.+.  .       |
+| .o.+.           |
++----[SHA256]-----+
+
+AV-9383@VA-8393 MINGW64 ~/.ssh
+$ ls -lart
+total 18
+drwxr-xr-x 1 AV-9383 197609    0 Dec  7 14:34 ../
+-rw-r--r-- 1 AV-9383 197609  285 Dec  7 14:40 known_hosts
+-rw-r--r-- 1 AV-9383 197609 2610 Dec  7 14:47 id_rsa
+-rw-r--r-- 1 AV-9383 197609  580 Dec  7 14:47 id_rsa.pub
+drwxr-xr-x 1 AV-9383 197609    0 Dec  7 14:47 ./
+
+AV-9383@VA-8393 MINGW64 ~/.ssh
+$ cat id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC5KYnar8Bjiy6ZGa7zSRdGuyvl+AxGo5qY9i6188vHuP9KkGXuXcm7qfuA63oT516lDFouoRxQUmJ0jU3NaRvj36FVg3rTFkyRtbKt+zIzD48XAb2E4fd90vttI7GGOk5FeUOylC0qYAexBTSe22lB3I6UsK0eN83O/eJLnVxqVh0AhvI9mlpo8QGgy6nSVfYsnwmzYUyeUwsd3uGI3792X5yEq8ciTsye0AVtsVZMwgLBGmaGAc269hdcRw5AisfuszPDsIWoK0zs6WFpF6QDv9eGHTZjbBR84G0ENW5nP44QwMiFJ1YOr+4vg8KJ4JPK4W0Hn/hDVwQJJ3AIcpNFwqqDBXEL+gHN+aI66NhCAdqJc297ZmxEuDtME55mAnOoVoupfRC90fkMgKmACOSc0OPJ1+esH8Eg0GdN0+BSjV9XetnnXW6V8PFSi17wju16KfpP1hUfnI+UYJjJK4PU9IAD6tz+fszZI2BtNshwd9ynsTcxRrT7PZ50LJaZxc0= sunilvishwanathp@gmail.com
+
+AV-9383@VA-8393 MINGW64 ~/.ssh
+$
+
+------------------
+In local system using git cmd
+
+
+D:\VISHU\RHEL_DevOps_AWS\git>git push -u origin master
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 40 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (7/7), 2.07 KiB | 1.04 MiB/s, done.
+Total 7 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To github.com:sunil848/github-repo-07Dec2021.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+D:\VISHU\RHEL_DevOps_AWS\git>
