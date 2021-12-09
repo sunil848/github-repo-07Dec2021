@@ -40,7 +40,7 @@ git {hit enter}										- 	Displays all the git commands
 
 git help <command>									-	Document will be opening in browser for respective command{manual page}
 
-
+git log --oneline									-	Displays logs line by line
 
 
 
@@ -748,3 +748,35 @@ Author: Sunil <sunilvishwanathp@gmail.com>
 Date:   Tue Dec 7 13:55:59 2021 +0530
 
     First check-in
+
+
+D:\VISHU\RHEL_DevOps_AWS\git>git log --oneline
+62efff6 (HEAD -> master, origin/master) Updated git-notes 09-Dec-2021
+675ef76 Deleted git-secondfile
+c4da57d git-notes file updated & created git-second file
+2bb7c25 git-notes file updated
+edb6e4d Updated notes in git-notes file
+2731c09 Changes made on git-notes & added new file to repo
+c223db5 First check-in
+
+Creating New Branch
+--------------------
+
+D:\VISHU\RHEL_DevOps_AWS\git>git branch
+* master
+
+D:\VISHU\RHEL_DevOps_AWS\git>git branch master-repo
+
+D:\VISHU\RHEL_DevOps_AWS\git>git branch
+* master
+  master-repo
+
+D:\VISHU\RHEL_DevOps_AWS\git>git checkout master-repo
+Switched to branch 'master-repo'
+M       git-notes.txt
+
+D:\VISHU\RHEL_DevOps_AWS\git>git branch
+  master
+* master-repo
+
+D:\VISHU\RHEL_DevOps_AWS\git>
