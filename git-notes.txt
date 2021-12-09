@@ -576,4 +576,175 @@ concept guides. See 'git help <command>' or 'git help <concept>'
 to read about a specific subcommand or concept.
 See 'git help git' for an overview of the system.
 
-D:\VISHU\RHEL_DevOps_AWS\git>
+How to remove a file in repository
+
+
+D:\VISHU\RHEL_DevOps_AWS\git>dir
+ Volume in drive D is SAM
+ Volume Serial Number is 4A20-A0DD
+
+ Directory of D:\VISHU\RHEL_DevOps_AWS\git
+
+12/07/2021  02:15 PM    <DIR>          .
+12/07/2021  02:15 PM    <DIR>          ..
+12/07/2021  02:15 PM                24 git-firstfile.txt
+12/08/2021  12:08 AM            22,625 git-notes.txt
+               2 File(s)         22,649 bytes
+               2 Dir(s)  498,028,883,968 bytes free
+
+D:\VISHU\RHEL_DevOps_AWS\git>git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   git-notes.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        git-secondfile.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+D:\VISHU\RHEL_DevOps_AWS\git>git add .
+
+D:\VISHU\RHEL_DevOps_AWS\git>git commit -am "git-notes file updated & created git-second file"
+[master c4da57d] git-notes file updated & created git-second file
+ 2 files changed, 53 insertions(+), 3 deletions(-)
+ create mode 100644 git-secondfile.txt
+
+D:\VISHU\RHEL_DevOps_AWS\git>git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+D:\VISHU\RHEL_DevOps_AWS\git>git log
+commit c4da57d8449b371c1d454552c590c5e1f81137e9 (HEAD -> master)
+Author: Sunil <sunilvishwanathp@gmail.com>
+Date:   Wed Dec 8 00:12:29 2021 +0530
+
+    git-notes file updated & created git-second file
+
+commit 2bb7c25107ef7c520ed0d5ea85f34e19951d5407 (origin/master)
+Author: Sunil <sunilvishwanathp@gmail.com>
+Date:   Tue Dec 7 23:51:22 2021 +0530
+
+    git-notes file updated
+
+commit edb6e4df537c45d509b8d289830f4fda8c5680b3
+Author: Sunil <sunilvishwanathp@gmail.com>
+Date:   Tue Dec 7 14:56:31 2021 +0530
+
+    Updated notes in git-notes file
+
+commit 2731c09dd20791f6007c2c1ec216a325707e989b
+Author: Sunil <sunilvishwanathp@gmail.com>
+Date:   Tue Dec 7 14:16:26 2021 +0530
+
+    Changes made on git-notes & added new file to repo
+
+commit c223db5079fd452eb4def4c77dc72e9d025a0977
+Author: Sunil <sunilvishwanathp@gmail.com>
+Date:   Tue Dec 7 13:55:59 2021 +0530
+
+    First check-in
+
+D:\VISHU\RHEL_DevOps_AWS\git>git push
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 40 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 1.56 KiB | 399.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:sunil848/github-repo-07Dec2021.git
+   2bb7c25..c4da57d  master -> master
+
+D:\VISHU\RHEL_DevOps_AWS\git>dir
+ Volume in drive D is SAM
+ Volume Serial Number is 4A20-A0DD
+
+ Directory of D:\VISHU\RHEL_DevOps_AWS\git
+
+12/08/2021  12:11 AM    <DIR>          .
+12/08/2021  12:11 AM    <DIR>          ..
+12/07/2021  02:15 PM                24 git-firstfile.txt
+12/08/2021  12:08 AM            22,625 git-notes.txt
+12/08/2021  12:11 AM                 0 git-secondfile.txt
+               3 File(s)         22,649 bytes
+               2 Dir(s)  498,028,343,296 bytes free
+
+D:\VISHU\RHEL_DevOps_AWS\git>git rm git-secondfile.txt
+rm 'git-secondfile.txt'
+
+D:\VISHU\RHEL_DevOps_AWS\git>git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    git-secondfile.txt
+
+
+D:\VISHU\RHEL_DevOps_AWS\git>git commit -am "Deleted git-secondfile"
+[master 675ef76] Deleted git-secondfile
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 git-secondfile.txt
+
+D:\VISHU\RHEL_DevOps_AWS\git>git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+D:\VISHU\RHEL_DevOps_AWS\git>git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 40 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 232 bytes | 116.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:sunil848/github-repo-07Dec2021.git
+   c4da57d..675ef76  master -> master
+
+D:\VISHU\RHEL_DevOps_AWS\git>git log
+commit 675ef7680226ce4358885fb080154ca4980bcab2 (HEAD -> master, origin/master)
+Author: Sunil <sunilvishwanathp@gmail.com>
+Date:   Wed Dec 8 00:14:19 2021 +0530
+
+    Deleted git-secondfile
+
+commit c4da57d8449b371c1d454552c590c5e1f81137e9
+Author: Sunil <sunilvishwanathp@gmail.com>
+Date:   Wed Dec 8 00:12:29 2021 +0530
+
+    git-notes file updated & created git-second file
+
+commit 2bb7c25107ef7c520ed0d5ea85f34e19951d5407
+Author: Sunil <sunilvishwanathp@gmail.com>
+Date:   Tue Dec 7 23:51:22 2021 +0530
+
+    git-notes file updated
+
+commit edb6e4df537c45d509b8d289830f4fda8c5680b3
+Author: Sunil <sunilvishwanathp@gmail.com>
+Date:   Tue Dec 7 14:56:31 2021 +0530
+
+    Updated notes in git-notes file
+
+commit 2731c09dd20791f6007c2c1ec216a325707e989b
+Author: Sunil <sunilvishwanathp@gmail.com>
+Date:   Tue Dec 7 14:16:26 2021 +0530
+
+    Changes made on git-notes & added new file to repo
+
+commit c223db5079fd452eb4def4c77dc72e9d025a0977
+Author: Sunil <sunilvishwanathp@gmail.com>
+Date:   Tue Dec 7 13:55:59 2021 +0530
+
+    First check-in
