@@ -779,4 +779,38 @@ D:\VISHU\RHEL_DevOps_AWS\git>git branch
   master
 * master-repo
 
+D:\VISHU\RHEL_DevOps_AWS\git>git status
+On branch master-repo
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   git-notes.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        git-testfile1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+D:\VISHU\RHEL_DevOps_AWS\git>git add .
+
+D:\VISHU\RHEL_DevOps_AWS\git>git commit -m "Updated git-notes on 09Dec2021 & created a newfile git-testfile1"
+[master-repo f0e9cca] Updated git-notes on 09Dec2021 & created a newfile git-testfile1
+ 2 files changed, 34 insertions(+), 1 deletion(-)
+ create mode 100644 git-testfile1.txt
+
+D:\VISHU\RHEL_DevOps_AWS\git>git status
+On branch master-repo
+nothing to commit, working tree clean
+
+D:\VISHU\RHEL_DevOps_AWS\git>git log --oneline
+f0e9cca (HEAD -> master-repo) Updated git-notes on 09Dec2021 & created a newfile git-testfile1
+62efff6 (origin/master, master) Updated git-notes 09-Dec-2021
+675ef76 Deleted git-secondfile
+c4da57d git-notes file updated & created git-second file
+2bb7c25 git-notes file updated
+edb6e4d Updated notes in git-notes file
+2731c09 Changes made on git-notes & added new file to repo
+c223db5 First check-in
+
 D:\VISHU\RHEL_DevOps_AWS\git>
