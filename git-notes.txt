@@ -813,4 +813,21 @@ edb6e4d Updated notes in git-notes file
 2731c09 Changes made on git-notes & added new file to repo
 c223db5 First check-in
 
+
+D:\VISHU\RHEL_DevOps_AWS\git>git push -u origin master-repo
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 40 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 1.24 KiB | 633.00 KiB/s, done.
+Total 7 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+remote:
+remote: Create a pull request for 'master-repo' on GitHub by visiting:
+remote:      https://github.com/sunil848/github-repo-07Dec2021/pull/new/master-repo
+remote:
+To github.com:sunil848/github-repo-07Dec2021.git
+ * [new branch]      master-repo -> master-repo
+Branch 'master-repo' set up to track remote branch 'master-repo' from 'origin'.
+
 D:\VISHU\RHEL_DevOps_AWS\git>
