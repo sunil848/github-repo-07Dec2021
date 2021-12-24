@@ -867,3 +867,88 @@ To github.com:sunil848/github-repo-07Dec2021.git
 Branch 'master-repo' set up to track remote branch 'master-repo' from 'origin'.
 
 D:\VISHU\RHEL_DevOps_AWS\git>
+
+Git clone
+|-----------------------------------------------------------------------|
+
+D:\VISHU\RHEL_DevOps_AWS\git>git branch
+  master
+* master-repo
+
+D:\VISHU\RHEL_DevOps_AWS\git>git status
+On branch master-repo
+Your branch is up to date with 'origin/master-repo'.
+
+nothing to commit, working tree clean
+
+
+D:\VISHU\RHEL_DevOps_AWS\git>c:
+
+C:\>cd Users
+
+C:\Users>dir
+ Volume in drive C is DMZ
+ Volume Serial Number is 148F-3654
+
+ Directory of C:\Users
+
+10/21/2021  11:51 AM    <DIR>          .
+10/21/2021  11:51 AM    <DIR>          ..
+10/21/2021  11:51 AM    <DIR>          defaultuser100000
+05/08/2021  08:15 PM    <DIR>          Public
+12/24/2021  03:50 PM    <DIR>          sunil
+               0 File(s)              0 bytes
+               5 Dir(s)  138,189,516,800 bytes free
+
+C:\Users>cd sunil
+
+C:\Users\sunil>git clone https://github.com/sunil848/github-repo-07Dec2021.git
+Cloning into 'github-repo-07Dec2021'...
+remote: Enumerating objects: 35, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (5/5), done.
+
+Receiving objects: 100% (35/35), 20.48 KiB | 1.86 MiB/s, done.
+Resolving deltas: 100% (9/9), done.
+
+C:\Users\sunil>dir
+ Volume in drive C is DMZ
+ Volume Serial Number is 148F-3654
+
+ Directory of C:\Users\sunil
+
+12/24/2021  03:57 PM    <DIR>          .
+12/24/2021  03:57 PM    <DIR>          ..
+05/08/2021  11:21 PM    <DIR>          .android
+09/07/2021  11:08 PM    <DIR>          .atom
+12/08/2021  12:16 AM               218 .bash_history
+06/22/2021  01:46 PM    <DIR>          .config
+06/22/2021  02:00 PM    <DIR>          .dotnet
+12/07/2021  01:52 PM                57 .gitconfig
+12/24/2021  03:50 PM                20 .lesshst
+12/07/2021  02:47 PM    <DIR>          .ssh
+12/07/2021  01:53 PM             1,033 .viminfo
+11/01/2021  12:57 AM    <DIR>          .VirtualBox
+05/05/2021  03:00 PM    <DIR>          3D Objects
+08/11/2021  07:14 PM    <DIR>          Apple
+05/05/2021  03:00 PM    <DIR>          Contacts
+06/22/2021  02:11 PM    <DIR>          demo-anu-app
+12/18/2021  11:09 PM    <DIR>          Desktop
+10/30/2021  07:59 PM    <DIR>          Documents
+12/20/2021  08:54 PM    <DIR>          Downloads
+05/05/2021  03:00 PM    <DIR>          Favorites
+12/24/2021  03:57 PM    <DIR>          github-repo-07Dec2021   --> Remote repository is cloned to local system in new location {C:\Users\sunil}
+05/05/2021  03:00 PM    <DIR>          Links
+08/11/2021  07:11 PM    <DIR>          Music
+08/11/2021  07:07 PM    <DIR>          OneDrive
+08/11/2021  07:57 PM    <DIR>          Pictures
+05/05/2021  03:00 PM    <DIR>          Saved Games
+05/05/2021  03:01 PM    <DIR>          Searches
+06/22/2021  02:10 PM    <DIR>          source
+05/16/2021  10:38 AM    <DIR>          Videos
+10/31/2021  09:23 PM    <DIR>          VirtualBox VMs
+               4 File(s)          1,328 bytes
+              26 Dir(s)  138,189,324,288 bytes free
+
+C:\Users\sunil>
+
