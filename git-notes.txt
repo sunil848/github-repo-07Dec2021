@@ -50,14 +50,18 @@ git log --oneline									-	Displays logs line by line
 
 output from server
 -------------------
-Notes : Create a 
+Notes: Go to your local repo: and type cmd and hit enter it will redirect to cmd line.  
+
+
+#Displays Status
 D:\VISHU\RHEL_DevOps_AWS\git>git status
 fatal: not a git repository (or any of the parent directories): .git
 
-
+#Initialize the repo
 D:\VISHU\RHEL_DevOps_AWS\git>git init
 Initialized empty Git repository in D:/VISHU/RHEL_DevOps_AWS/git/.git/
 
+#Displays status
 D:\VISHU\RHEL_DevOps_AWS\git>git status
 On branch master
 
@@ -69,8 +73,10 @@ Untracked files:
 
 nothing added to commit but untracked files present (use "git add" to track)
 
+#Add all the files to git from local repo
 D:\VISHU\RHEL_DevOps_AWS\git>git add .
 
+#Display status
 D:\VISHU\RHEL_DevOps_AWS\git>git status
 On branch master
 
@@ -81,8 +87,7 @@ Changes to be committed:
         new file:   git-notes.txt
 
 
-
-
+#Commit changes
 D:\VISHU\RHEL_DevOps_AWS\git>git commit
 Author identity unknown
 
@@ -98,20 +103,23 @@ Omit --global to set the identity only in this repository.
 
 fatal: unable to auto-detect email address (got 'AV-9383@VA-8393.(none)')
 
+#Enter the login details of github
 D:\VISHU\RHEL_DevOps_AWS\git>git config --global user.email "sunilvishwanathp@gmail.com"
 
 D:\VISHU\RHEL_DevOps_AWS\git>git config --global user.name "Sunil"
 
-
+#Commit changes with the message (-m)
 D:\VISHU\RHEL_DevOps_AWS\git>git commit -m "First check-in"
 [master (root-commit) c223db5] First check-in
  1 file changed, 19 insertions(+)
  create mode 100644 git-notes.txt
 
+#Displays git status
 D:\VISHU\RHEL_DevOps_AWS\git>git status
 On branch master
 nothing to commit, working tree clean
 
+#Displays the previous executed command
 D:\VISHU\RHEL_DevOps_AWS\git>git log
 commit c223db5079fd452eb4def4c77dc72e9d025a0977 (HEAD -> master)
 Author: Sunil <sunilvishwanathp@gmail.com>
@@ -120,6 +128,7 @@ Date:   Tue Dec 7 13:55:59 2021 +0530
     First check-in
 
 
+#Displays the configuration of the local git
 D:\VISHU\RHEL_DevOps_AWS\git>git config --list
 diff.astextplain.textconv=astextplain
 filter.lfs.clean=git-lfs clean -- %f
@@ -147,14 +156,15 @@ user.name=Sunil
 user.mail=sunilvishwanathp@gmail.com
 
 
-
+#Displays the username set for git / github
 D:\VISHU\RHEL_DevOps_AWS\git>git config user.name
 Sunil
 
+#Displays the email set for git / github
 D:\VISHU\RHEL_DevOps_AWS\git>git config user.email
 sunilvishwanathp@gmail.com
 
-
+#Displays the git status
 D:\VISHU\RHEL_DevOps_AWS\git>git status
 On branch master
 Changes not staged for commit:
@@ -168,8 +178,10 @@ Untracked files:
 
 no changes added to commit (use "git add" and/or "git commit -a")
 
+#Add local files to git
 D:\VISHU\RHEL_DevOps_AWS\git>git add .
 
+#Displays the git status
 D:\VISHU\RHEL_DevOps_AWS\git>git status
 On branch master
 Changes to be committed:
@@ -177,16 +189,18 @@ Changes to be committed:
         new file:   git-firstfile.txt
         modified:   git-notes.txt
 
-
+#Commit changes 
 D:\VISHU\RHEL_DevOps_AWS\git>git commit -m "Changes made on git-notes & added new file to repo"
 [master 2731c09] Changes made on git-notes & added new file to repo
  2 files changed, 137 insertions(+)
  create mode 100644 git-firstfile.txt
 
+#Displays the git status
 D:\VISHU\RHEL_DevOps_AWS\git>git status
 On branch master
 nothing to commit, working tree clean
 
+#Displays the previous executed command
 D:\VISHU\RHEL_DevOps_AWS\git>git log
 commit 2731c09dd20791f6007c2c1ec216a325707e989b (HEAD -> master)
 Author: Sunil <sunilvishwanathp@gmail.com>
@@ -200,7 +214,7 @@ Date:   Tue Dec 7 13:55:59 2021 +0530
 
     First check-in
 
-
+#Displays the contents in the local dir
 D:\VISHU\RHEL_DevOps_AWS\git>dir
  Volume in drive D is SAM
  Volume Serial Number is 4A20-A0DD
@@ -215,9 +229,9 @@ D:\VISHU\RHEL_DevOps_AWS\git>dir
                2 Dir(s)  498,028,916,736 bytes free
 			   
 			   
-Github			   
------------------
 Note: When you create a repository in github you will see below details
+Github			   
+|-----------------------------------------------------------------------|
 
 Quick setup — if you’ve done this kind of thing before
 or	
@@ -235,16 +249,23 @@ git push -u origin main
 
 Note: We are proceeding with below procedure, as we already created repo in local
 
-…or push an existing repository from the command line
+…or 
+push an existing repository from the command line to github
+
+#Add github remote repo
 git remote add origin git@github.com:sunil848/github-repo-07Dec2021.git
+
+#Branching main 
 git branch -M main
+
+#
 git push -u origin main
 
 …or import code from another repository
 You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
 
 On your system git cmd
------------------------
+|-----------------------------------------------------------------------|
 
 D:\VISHU\RHEL_DevOps_AWS\git>git remote add origin git@github.com:sunil848/github-repo-07Dec2021.git
 
@@ -331,6 +352,8 @@ debug1: Trying private key: C:\\Users\\sunil/.ssh/id_xmss
 debug1: No more authentication methods to try.
 git@github.com: Permission denied (publickey).
 
+
+#
 D:\VISHU\RHEL_DevOps_AWS\git>ssh -T sunil848@github.com
 Warning: Permanently added the ED25519 host key for IP address '13.234.176.102' to the list of known hosts.
 sunil848@github.com: Permission denied (publickey).
@@ -346,10 +369,10 @@ unable to start ssh-agent service, error :1058
 
 D:\VISHU\RHEL_DevOps_AWS\git>
 
------------------------
+|-----------------------------------------------------------------------|
 Error fix
 
-"Help, I keep getting a 'Permission Denied (publickey)' error when I push!"
+"I keep getting a 'Permission Denied (publickey)' error when I push!"
 This means, on your local machine, you haven't made any SSH keys. Not to worry. Here's how to fix:
 
 Open git bash (Use the Windows search. To find it, type "git bash") or the Mac Terminal. Pro Tip: You can use any *nix based command prompt (but not the default Windows Command Prompt!)
@@ -368,7 +391,7 @@ Now that you've added your public key to Github and/or BitBucket, try to git pus
 
 
 In git bash
---------------------
+|-----------------------------------------------------------------------|
 
 
 AV-9383@VA-8393 MINGW64 /d/VISHU/RHEL_DevOps_AWS/git/.git (GIT_DIR!)
@@ -439,7 +462,7 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC5KYnar8Bjiy6ZGa7zSRdGuyvl+AxGo5qY9i6188vH
 AV-9383@VA-8393 MINGW64 ~/.ssh
 $
 
-------------------
+|-----------------------------------------------------------------------|
 In local system using git cmd
 
 
@@ -528,7 +551,7 @@ To github.com:sunil848/github-repo-07Dec2021.git
    2731c09..edb6e4d  master -> master
 Branch 'master' set up to track remote branch 'master' from 'origin'.
 
-
+#Git commands
 D:\VISHU\RHEL_DevOps_AWS\git>git
 usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
            [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
@@ -576,9 +599,9 @@ concept guides. See 'git help <command>' or 'git help <concept>'
 to read about a specific subcommand or concept.
 See 'git help git' for an overview of the system.
 
-How to remove a file in repository
 
 
+#Lists files in local repo
 D:\VISHU\RHEL_DevOps_AWS\git>dir
  Volume in drive D is SAM
  Volume Serial Number is 4A20-A0DD
@@ -591,6 +614,7 @@ D:\VISHU\RHEL_DevOps_AWS\git>dir
 12/08/2021  12:08 AM            22,625 git-notes.txt
                2 File(s)         22,649 bytes
                2 Dir(s)  498,028,883,968 bytes free
+
 
 D:\VISHU\RHEL_DevOps_AWS\git>git status
 On branch master
@@ -607,6 +631,7 @@ Untracked files:
 
 no changes added to commit (use "git add" and/or "git commit -a")
 
+#
 D:\VISHU\RHEL_DevOps_AWS\git>git add .
 
 D:\VISHU\RHEL_DevOps_AWS\git>git commit -am "git-notes file updated & created git-second file"
@@ -614,6 +639,7 @@ D:\VISHU\RHEL_DevOps_AWS\git>git commit -am "git-notes file updated & created gi
  2 files changed, 53 insertions(+), 3 deletions(-)
  create mode 100644 git-secondfile.txt
 
+#
 D:\VISHU\RHEL_DevOps_AWS\git>git status
 On branch master
 Your branch is ahead of 'origin/master' by 1 commit.
@@ -621,6 +647,7 @@ Your branch is ahead of 'origin/master' by 1 commit.
 
 nothing to commit, working tree clean
 
+#
 D:\VISHU\RHEL_DevOps_AWS\git>git log
 commit c4da57d8449b371c1d454552c590c5e1f81137e9 (HEAD -> master)
 Author: Sunil <sunilvishwanathp@gmail.com>
@@ -652,6 +679,7 @@ Date:   Tue Dec 7 13:55:59 2021 +0530
 
     First check-in
 
+#
 D:\VISHU\RHEL_DevOps_AWS\git>git push
 Enumerating objects: 6, done.
 Counting objects: 100% (6/6), done.
@@ -663,6 +691,7 @@ remote: Resolving deltas: 100% (1/1), completed with 1 local object.
 To github.com:sunil848/github-repo-07Dec2021.git
    2bb7c25..c4da57d  master -> master
 
+#
 D:\VISHU\RHEL_DevOps_AWS\git>dir
  Volume in drive D is SAM
  Volume Serial Number is 4A20-A0DD
@@ -677,9 +706,12 @@ D:\VISHU\RHEL_DevOps_AWS\git>dir
                3 File(s)         22,649 bytes
                2 Dir(s)  498,028,343,296 bytes free
 
+
+#
 D:\VISHU\RHEL_DevOps_AWS\git>git rm git-secondfile.txt
 rm 'git-secondfile.txt'
 
+#
 D:\VISHU\RHEL_DevOps_AWS\git>git status
 On branch master
 Your branch is up to date with 'origin/master'.
@@ -688,12 +720,13 @@ Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
         deleted:    git-secondfile.txt
 
-
+#
 D:\VISHU\RHEL_DevOps_AWS\git>git commit -am "Deleted git-secondfile"
 [master 675ef76] Deleted git-secondfile
  1 file changed, 0 insertions(+), 0 deletions(-)
  delete mode 100644 git-secondfile.txt
 
+#
 D:\VISHU\RHEL_DevOps_AWS\git>git status
 On branch master
 Your branch is ahead of 'origin/master' by 1 commit.
@@ -701,6 +734,7 @@ Your branch is ahead of 'origin/master' by 1 commit.
 
 nothing to commit, working tree clean
 
+#
 D:\VISHU\RHEL_DevOps_AWS\git>git push
 Enumerating objects: 3, done.
 Counting objects: 100% (3/3), done.
@@ -712,6 +746,7 @@ remote: Resolving deltas: 100% (1/1), completed with 1 local object.
 To github.com:sunil848/github-repo-07Dec2021.git
    c4da57d..675ef76  master -> master
 
+#
 D:\VISHU\RHEL_DevOps_AWS\git>git log
 commit 675ef7680226ce4358885fb080154ca4980bcab2 (HEAD -> master, origin/master)
 Author: Sunil <sunilvishwanathp@gmail.com>
@@ -750,6 +785,7 @@ Date:   Tue Dec 7 13:55:59 2021 +0530
     First check-in
 
 
+#
 D:\VISHU\RHEL_DevOps_AWS\git>git log --oneline
 62efff6 (HEAD -> master, origin/master) Updated git-notes 09-Dec-2021
 675ef76 Deleted git-secondfile
@@ -760,7 +796,7 @@ edb6e4d Updated notes in git-notes file
 c223db5 First check-in
 
 Creating New Branch
---------------------
+|-----------------------------------------------------------------------|
 
 D:\VISHU\RHEL_DevOps_AWS\git>git branch
 * master
