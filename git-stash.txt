@@ -1,0 +1,1 @@
+Stash is concept of saving the file in git temporarly.

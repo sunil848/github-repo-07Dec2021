@@ -1303,3 +1303,9 @@ D:\VISHU\RHEL_DevOps_AWS\git>dir
                2 Dir(s)  498,028,077,056 bytes free
 |-----------------------------------------------------------------------|
 Rebase concept
+Caution: Not be used in prod env: as it changes the order of the base.
+
+Example is provided in the snippet
+|-----------------------------------------------------------------------|
+Stash concept
+
