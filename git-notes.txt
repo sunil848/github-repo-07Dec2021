@@ -1111,6 +1111,11 @@ D:\VISHU\RHEL_DevOps_AWS\git>git checkout master
 Switched to branch 'master'
 Your branch is up to date with 'origin/master'.
 
+D:\VISHU\RHEL_DevOps_AWS\git>git branch
+  UAT
+* master
+  master-repo
+
 D:\VISHU\RHEL_DevOps_AWS\git>git merge UAT
 Updating 62efff6..0f101d6
 Fast-forward
@@ -1127,6 +1132,16 @@ Your branch is ahead of 'origin/master' by 6 commits.
   (use "git push" to publish your local commits)
 
 nothing to commit, working tree clean
+
+
+D:\VISHU\RHEL_DevOps_AWS\git>git push
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:sunil848/github-repo-07Dec2021.git
+   62efff6..0f101d6  master -> master
+
+
+
+
 
 D:\VISHU\RHEL_DevOps_AWS\git>
 |-----------------------------------------------------------------------|
