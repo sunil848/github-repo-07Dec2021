@@ -952,3 +952,117 @@ C:\Users\sunil>dir
 
 C:\Users\sunil>
 
+Pull remote repo to local repo
+|-----------------------------------------------------------------------|
+
+
+D:\VISHU\RHEL_DevOps_AWS\git>git branch
+  master
+* master-repo
+
+D:\VISHU\RHEL_DevOps_AWS\git>git branch UAT
+
+D:\VISHU\RHEL_DevOps_AWS\git>git branch
+  UAT
+  master
+* master-repo
+
+D:\VISHU\RHEL_DevOps_AWS\git>git checkout UAT
+Switched to branch 'UAT'
+
+D:\VISHU\RHEL_DevOps_AWS\git>git branch
+* UAT
+  master
+  master-repo
+
+D:\VISHU\RHEL_DevOps_AWS\git>git checkout master-repo
+Switched to branch 'master-repo'
+Your branch is up to date with 'origin/master-repo'.
+
+D:\VISHU\RHEL_DevOps_AWS\git>git branch
+  UAT
+  master
+* master-repo
+
+D:\VISHU\RHEL_DevOps_AWS\git>git status
+On branch master-repo
+Your branch is up to date with 'origin/master-repo'.
+
+nothing to commit, working tree clean
+
+D:\VISHU\RHEL_DevOps_AWS\git>git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+D:\VISHU\RHEL_DevOps_AWS\git>git branch
+  UAT
+* master
+  master-repo
+
+D:\VISHU\RHEL_DevOps_AWS\git>git pull origin master
+From github.com:sunil848/github-repo-07Dec2021
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+
+D:\VISHU\RHEL_DevOps_AWS\git>git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+
+#############################################
+
+
+D:\VISHU\RHEL_DevOps_AWS\git>git branch
+  UAT
+* master
+  master-repo
+
+D:\VISHU\RHEL_DevOps_AWS\git>git checkout master-repo
+Switched to branch 'master-repo'
+Your branch is up to date with 'origin/master-repo'.
+
+D:\VISHU\RHEL_DevOps_AWS\git>git pull origin master-repo
+From github.com:sunil848/github-repo-07Dec2021
+ * branch            master-repo -> FETCH_HEAD
+Already up to date.
+
+D:\VISHU\RHEL_DevOps_AWS\git>
+
+|-----------------------------------------------------------------------|
+
+Deleting a branch
+
+D:\VISHU\RHEL_DevOps_AWS\git>git branch
+  UAT
+  delete
+  master
+* master-repo
+  rm
+
+D:\VISHU\RHEL_DevOps_AWS\git>git branch -d rm
+Deleted branch rm (was b31804e).
+
+D:\VISHU\RHEL_DevOps_AWS\git>git branch -d delete
+Deleted branch delete (was b31804e).
+
+D:\VISHU\RHEL_DevOps_AWS\git>git branch -d UAT
+Deleted branch UAT (was b31804e).
+
+D:\VISHU\RHEL_DevOps_AWS\git>git branch
+  master
+* master-repo
+
+D:\VISHU\RHEL_DevOps_AWS\git>
+|-----------------------------------------------------------------------|
+Creating a new branch and switch to the new branch using single command
+
+D:\VISHU\RHEL_DevOps_AWS\git>git checkout -b UAT
+Switched to a new branch 'UAT'
+
+D:\VISHU\RHEL_DevOps_AWS\git>git branch
+* UAT
+  master
+  master-repo
+|-----------------------------------------------------------------------|
