@@ -1302,3 +1302,4 @@ D:\VISHU\RHEL_DevOps_AWS\git>dir
                4 File(s)         40,700 bytes
                2 Dir(s)  498,028,077,056 bytes free
 |-----------------------------------------------------------------------|
+Rebase concept
